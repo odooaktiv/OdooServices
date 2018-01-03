@@ -30,5 +30,5 @@ Functionalities
         'views/warning_box.xml'
     ],
     'demo': ['demo/demo.xml'],
-    'images': ['static/description/banner.png'],
+    'images': ['static/description/banner.jpg'],
 }
