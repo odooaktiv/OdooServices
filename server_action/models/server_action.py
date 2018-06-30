@@ -34,11 +34,15 @@ class ServerAction(models.Model):
             password = self.password.strip()
             ser.login(self.server, self.username, password)
             ser.logout()
-            return self.env['warning_box'].info(title='Success', message="Connection Test Succeeded! Everything seems properly set up!")
+            return self.env['warning_box'].info(title='Success',
+                                                message="Connection Test\
+                                                Succeeded! Everything seems\
+                                                properly set up!")
         except Exception:
             _logger.info("Failed to connect to %s.", self.name, exc_info=True)
             raise UserError(
-                _("Connection Test Failed!. \nPlease check and correct the Credential for %s.") % self.name)
+                _("Connection Test Failed!. \nPlease check and correct the\
+                    Credential for %s.") % self.name)
 
     @api.multi
     def action_start(self):
@@ -57,7 +61,9 @@ class ServerAction(models.Model):
 
         self.env['server.action.history'].create(
             {'server_id': self.id, 'state': 'start'})
-        return self.env['warning_box'].info(title='Success', message="Connection with " + self.name + " started successful!")
+        return self.env['warning_box'].info(title='Success',
+                                            message="Connection with " +
+                                            self.name + " started successful!")
 
     @api.multi
     def action_stop(self):
@@ -75,7 +81,9 @@ class ServerAction(models.Model):
             raise UserError(_("Connection failed: %s") % tools.ustr(e))
         self.env['server.action.history'].create(
             {'server_id': self.id, 'state': 'stop'})
-        return self.env['warning_box'].info(title='Success', message="Connection with " + self.name + " stopped successful!")
+        return self.env['warning_box'].info(title='Success',
+                                            message="Connection with " +
+                                            self.name + " stopped successful!")
 
     @api.multi
     def action_restart(self):
@@ -93,7 +101,10 @@ class ServerAction(models.Model):
             raise UserError(_("Connection failed: %s") % tools.ustr(e))
         self.env['server.action.history'].create(
             {'server_id': self.id, 'state': 'restart'})
-        return self.env['warning_box'].info(title='Success', message="Connection with " + self.name + " restarted successful!")
+        return self.env['warning_box'].info(title='Success',
+                                            message="Connection with " +
+                                            self.name +
+                                            " restarted successful!")
 
 
 class ServerActionHistory(models.Model):
@@ -102,4 +113,5 @@ class ServerActionHistory(models.Model):
 
     server_id = fields.Many2one('server.action', 'Server')
     state = fields.Selection(
-        [('start', 'Started'), ('stop', 'Stopped'), ('restart', 'Restarted')], string='Status')
+        [('start', 'Started'), ('stop', 'Stopped'),
+         ('restart', 'Restarted')], string='Status')
