@@ -1,41 +1,97 @@
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan" style="color:#875A7B;">Server Details</h2>
-        <h3 class="oe_slogan">Manage list of multiple server details</h3>
-        <div class="col-md-12">
-            <img class="oe_picture" style="margin-left: 5%;" src="server_details.png" width="700">
+<section class="oe_container">
+    <div class="oe_row oe_centered">
+        <div class="oe_span_10 oe_centered">
+            <h4 class="oe_slogan" style="margin-left: 120px;"><b><span class="fa fa-star fa-spin"></span>
+                    Server Action </span></b></h4>
         </div>
     </div>
-</section>
 
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan" style="color:#875A7B;">Server Actions</h2>
-	<div class="col-md-12">
-	<p style="font-size:17px;">
-            Manage server details with its url,username,password and commands to start,stop and restart odoo server using Odoo Interface
-        </p>
-</div>
-        <div class="col-md-9 col-md-offset-1">
-            <img class="oe_picture" src="server_actions.png">
+    <p align="left">The Server Action module allows the admin to START, STOP and RESTART the server by mentioning the commands to start, stop and restart the server. Admin can manage multiple servers and can add details such as username, client name, server URL, and password. This becomes helpful when client faces difficulty during the need for updating various server actions. Admin can simply click on those server action buttons and can easily run the code mentioned in the commands. As a result, clients can get their server problems fixed without any hassles. Here are the features of this module:</p>
+
+    <div class="oe_centered">
+        <ul>
+            <li>Admin can list down the credentials for different client’s server.</li>
+            <li>Also, as the server action commands vary for different OS, so admin can set commands for START/STOP/RESTART accordingly.</li>
+            <li>When clicked on the server action button the command mentioned will run successfully implementing the action.</li>
+            <li>Admin can also track the server actions made for various client server through history management feature.</li>
+            <li>Additional information can be mentioned in the instruction tab if needed.</li>
+        </ul>
+    </div>
+
+    <div class="oe_row oe_centered">
+        <div class="oe_span_10 oe_centered">
+            <h4 class="oe_slogan" style="margin-left: 120px;"><b><span class="fa fa-star fa-spin"></span>
+                    Prerequisites before Installation </span></b></h4>
         </div>
     </div>
-</section>
+     <div class="oe_centered">
+        <ul>
+            <li>pexpect: sudo pip install pexpect.</li>
+        </ul>
+    </div>
 
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan" style="color:#875A7B;">History Management</h2>
-<div class="col-md-12">
-	<p style="font-size:17px;text-align: center;">
-            Track and Maintain logs of all server actions 
-        </p>
-</div>
-        <div class="col-md-9 col-md-offset-1">
-            <img class="oe_picture" src="server_history.png">
+
+    <div class="oe_row oe_centered">
+        <div class="oe_span_10 oe_centered">
+            <h4 class="oe_slogan" style="margin-left: 120px;"><b><span class="fa fa-star fa-spin"></span>
+                    Configurations </span></b></h4>
         </div>
     </div>
-</section>
+   
+   <div class="oe_centered">
+        <ul>
+            <li>Only users with access right to "Server Action" can manage server actions.</li>
+            <li>Settings > Users > Other > Server action</li>
+            <li>Add list of server details.</li>
+        </ul>
+    </div>
+
+    <div class="oe_centered">
+        <p>As you can see from the image admin can add multiple client servers with various details such as username, password, server URL, and client name. Separate user groups are created so that server action can be managed easily and admin can also provide access to particular user for managing server action.</p>
+        <p>Go to Server Action-> Create->Add details.</p>
+    </div>
+    <div class="oe_row oe_centered">
+        <div class="oe_span12">
+            <img src="server_details.png" style="width: 100%;"/>
+        </div>
+    </div>
+
+    <div class="oe_centered">
+        <p>After listing the client server details admin in case of any difficulty from client server can perform various server actions such as START, STOP and RESTART. Moreover, admin can provide commands for server actions as per the OS.</p>
+        <p>When clicked on the server action particular command will run in backend and client server issue will be resolved easily without need to connect to terminal Odoo.</p>
+    </div>
+    <div class="oe_row oe_centered">
+        <div class="oe_span12">
+            <img src="server_actions.png" style="width: 100%;"/>
+        </div>
+    </div>
+
+    <div class="oe_centered">
+        <p>All of the serve actions performed can be managed through the history. Admin can view client server name, created by which user and the server action performed on that server.</p>
+    </div>
+    <div class="oe_row oe_centered">
+        <div class="oe_span12">
+            <img src="server_history.png" style="width: 100%;"/>
+        </div>
+    </div>
 
 
-<section class="oe_container oe_separator">
+<!-- Don't Remove Below Part -->
+
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">
+            <a href="http://aktivsoftware.com/" target="new">
+                <img src="http://aktivsoftware.com/wp-content/uploads/2018/01/logo-1.png"/>
+            </a>
+            <br/>
+            <a href="mailto:sales@aktivsoftware.com" style="color: #000000 !important;">
+                        Get Help &amp; Support
+            </a>
+        </h2>
+        <div class="oe_slogan oe_spaced text-center">
+            <a class="btn btn success mt8" title="website" target="new" style="background-color:#ff4040;  color: #ffffff; !important; position:relative; overflow: hidden;" href="http://aktivsoftware.com/"><b>Website</b></a>
+            <a class="btn btn success mt8" title="Contact Us" style="background-color:#ff4040; color: #ffffff; !important; position:relative; overflow: hidden;" href="mailto:sales@aktivsoftware.com"><b>Contact Us</b></a>
+            <a class="btn btn success mt8" title="Request New Features Now!" style="background-color:#ff4040; color: #ffffff; !important; position:relative; overflow: hidden;" href="mailto:sales@aktivsoftware.com"><b>Request For New Features</b></a>
+        </div>
+    </div>
 </section>
