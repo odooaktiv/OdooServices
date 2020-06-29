@@ -3,7 +3,7 @@ Odoo server Action
 
 Version
 --------
-Odoo 11.0
+Odoo 10.0
 
 Notes
 --------
