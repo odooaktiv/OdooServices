@@ -57,7 +57,7 @@ class ServerAction(models.Model):
             ser.prompt()
             ser.before.decode('utf-8')
             ser.logout()
-        except Exception, e:
+        except Exception as e:
             _logger.info("Failed to connect to %s.", self.name, exc_info=True)
             raise UserError(_("Connection failed: %s") % tools.ustr(e))
 
@@ -79,7 +79,7 @@ class ServerAction(models.Model):
             ser.prompt()
             ser.before.decode('utf-8')
             ser.logout()
-        except Exception, e:
+        except Exception as e:
             _logger.info("Failed to connect to %s.", self.name, exc_info=True)
             raise UserError(_("Connection failed: %s") % tools.ustr(e))
         self.env['server.action.history'].create(
@@ -100,7 +100,7 @@ class ServerAction(models.Model):
             ser.prompt()
             ser.before.decode('utf-8')
             ser.logout()
-        except Exception, e:
+        except Exception as e:
             _logger.info("Failed to connect to %s.", self.name, exc_info=True)
             raise UserError(_("Connection failed: %s") % tools.ustr(e))
         self.env['server.action.history'].create(
