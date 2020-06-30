@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-    	<!-- explicit list view definition -->
+        <!-- explicit list view definition -->
 
         <record model="ir.ui.view" id="server_action.list">
             <field name="name">server_action list</field>
@@ -23,7 +23,7 @@
             <field name="arch" type="xml">
                 <form>
                     <header>
-                		<button name="test_connection" string="Test Connection" class="btn-primary" type="object" />
+                        <button name="test_connection" string="Test Connection" class="btn-primary" type="object" />
                         <button name="action_start" string="Start" class="btn-primary" type="object" />
                         <button name="action_stop" string="Stop" class="btn-primary" type="object" />
                         <button name="action_restart" string="Restart" type="object"/>

@@ -28,7 +28,7 @@ Functionalities
         'security/server_action_security.xml',
         'security/ir.model.access.csv',
         'views/server_action_views.xml',
-        'views/warning_box.xml'
+        'views/warning_box.xml',
     ],
     'demo': ['demo/demo.xml'],
     'images': ['static/description/banner.jpg'],

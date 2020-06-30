@@ -9,6 +9,7 @@ _logger = logging.getLogger(__name__)
 
 class ServerAction(models.Model):
     _name = 'server.action'
+    _description = 'Server Action'
 
     name = fields.Char('Name', required=True)
     server = fields.Char('Server URL', required=True)
@@ -113,6 +114,7 @@ class ServerAction(models.Model):
 
 class ServerActionHistory(models.Model):
     _name = 'server.action.history'
+    _description = 'Server Action History'
     _rec_name = 'server_id'
 
     server_id = fields.Many2one('server.action', 'Server')
