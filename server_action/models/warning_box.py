@@ -25,13 +25,11 @@ class warning_box(models.TransientModel):
         readonly=True
     )
 
-    @api.multi
     def message_action(self):
         self.ensure_one
         message_type = [t[1]for t in WARNING_TYPES if self.type == t[0]][0]
         res = {
             'name': '%s: %s' % (_(message_type), _(self.title)),
-            'view_type': 'form',
             'view_mode': 'form',
             'view_id': self.env['ir.model.data'].xmlid_to_res_id(
                 'warning_box.warning_box_form'),

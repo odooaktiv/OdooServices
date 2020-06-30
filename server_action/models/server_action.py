@@ -27,7 +27,6 @@ class ServerAction(models.Model):
         'Server must be unique'
     )]
 
-    @api.multi
     def test_connection(self):
         """For test server connection"""
         try:
@@ -46,7 +45,6 @@ class ServerAction(models.Model):
                 _("Connection Test Failed!. \nPlease check and correct\
                  the Credential for %s.") % self.name)
 
-    @api.multi
     def action_start(self):
         """To start server action"""
         try:
@@ -68,7 +66,6 @@ class ServerAction(models.Model):
                                             message="Connection with " +
                                             self.name + " started successful!")
 
-    @api.multi
     def action_stop(self):
         """To stop server action"""
         try:
@@ -89,7 +86,6 @@ class ServerAction(models.Model):
                                             message="Connection with " +
                                             self.name + " stopped successful!")
 
-    @api.multi
     def action_restart(self):
         """To restart server action"""
         try:
