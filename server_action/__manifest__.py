@@ -12,18 +12,12 @@ Functionalities
 -> Start, Stop and Restart odoo server through odoo interface
 -> Maintain history to manage who perform the server action and when
     """,
-
     'author': "Aktiv software ",
     'website': "http://www.aktivsoftware.com/",
-
     'category': 'Server',
     'version': '13.0.1.0.0',
     'license': 'AGPL-3',
-
-    # any module necessary for this one to work correctly
     'depends': ['base'],
-
-    # always loaded
     'data': [
         'security/server_action_security.xml',
         'security/ir.model.access.csv',
