@@ -16,7 +16,7 @@ Functionalities
     'author': "Aktiv software ",
     'website': "http://www.aktivsoftware.com/",
 
-    'category': 'Server',
+    'category': 'Extra Tools',
     'version': '10.0.1.0.0',
     'license': 'AGPL-3',
 
